@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Git OAuth2.0 API Test";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<ol class="round">
+    <li class="one">
+        <div class="requestToken" style="display:none">
+            <h5>Click below to start git authorization</h5>
+            <form action="websites/RequestToken" method="post" >
+                <input type="submit" value="start git oauth"/>
+            </form>
+        </div>
+        <div class="accessToken" style="display:none">
+            <h5>Access Token</h5>
+            <div class="token"></div>
+        </div>
+    </li>
+
+    <li class="two" style="display:none">
+        <h5>Select Repository</h5>
+        <p>
+        <select class="repos">
+        </select> 
+        </p>
+    </li>
+
+    <li class="three" style="display:none">
+        <h5>Click below to list hook urls</h5>
+        <button class="buttonHook">list hook urls</button>
+        <input class="hooks" type="text" />
+    </li>
+</ol>
